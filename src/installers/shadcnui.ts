@@ -3,6 +3,7 @@ import fs from "fs-extra";
 
 import { PKG_ROOT } from "@/consts.js";
 import type { Installer } from "@/installers/index.js";
+import { addMcpServer } from "@/utils/addMcpServer.js";
 
 export const shadcnUIInstaller: Installer = ({ projectDir }) => {
 	const extrasDir = path.join(PKG_ROOT, "template/extras");
@@ -18,4 +19,13 @@ export const shadcnUIInstaller: Installer = ({ projectDir }) => {
 		globalCssFileDest,
 		fs.readFileSync(globalCssFileSrc, "utf8"),
 	);
+
+	addMcpServer({
+		serverName: "shadcn",
+		serverConfig: {
+			command: "npx",
+			args: ["shadcn@latest", "mcp"],
+		},
+		projectDir,
+	});
 };

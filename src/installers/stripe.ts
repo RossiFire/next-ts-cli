@@ -5,6 +5,7 @@ import { PKG_ROOT } from "@/consts.js";
 import type { Installer } from "@/installers/index.js";
 import { addPackageScript } from "@/utils/addPackageScript.js";
 import { addPackageDependency } from "@/utils/addPackageDependency.js";
+import { addMcpServer } from "@/utils/addMcpServer.js";
 
 export const stripeInstaller: Installer = ({ projectDir }) => {
 	addPackageDependency({
@@ -36,5 +37,13 @@ export const stripeInstaller: Installer = ({ projectDir }) => {
 			"webhook:local":
 				"stripe listen --forward-to localhost:3000/api/webhook/stripe",
 		},
+	});
+	addMcpServer({
+		serverName: "stripe",
+		serverConfig: {
+			type: "http",
+			url: "https://mcp.stripe.com",
+		},
+		projectDir,
 	});
 };

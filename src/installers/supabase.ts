@@ -4,6 +4,7 @@ import fs from "fs-extra";
 import { PKG_ROOT } from "@/consts.js";
 import type { Installer } from "@/installers/index.js";
 import { addPackageDependency } from "@/utils/addPackageDependency.js";
+import { addMcpServer } from "@/utils/addMcpServer.js";
 
 export const supabaseInstaller: Installer = ({ projectDir }) => {
 	addPackageDependency({
@@ -17,4 +18,13 @@ export const supabaseInstaller: Installer = ({ projectDir }) => {
 
 	const supabaseDest = path.join(projectDir, "lib", "supabase");
 	fs.copySync(supabaseDir, supabaseDest);
+
+	addMcpServer({
+		serverName: "supabase",
+		serverConfig: {
+			type: "http",
+			url: "https://mcp.supabase.com/mcp?project_ref=<YOUR_SUPABASE_PROJECT_ID>",
+		},
+		projectDir,
+	});
 };

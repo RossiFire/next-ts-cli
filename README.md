@@ -74,10 +74,14 @@ npx next-ts-cli my-app --cli --supabase --drizzle --shadcnui --stripe
 
 🎨 **Shadcn/ui** - With neutral configuration to start building compound components 
 
-**AI Integration** - Vercel AI Gateway for building an AI app
+💡 **AI Integration** - Vercel AI Gateway for building AI apps
 
 
 _*These integrations are all optional, so not required to scaffold the core project_
+
+Beside these, there is also another automatic feature:
+
+📁 **MCP Configurations** - Dynamically MCP Servers for Cursor and VSCode loaded bases on selected integrations 
 
 
 ## Core Stack
