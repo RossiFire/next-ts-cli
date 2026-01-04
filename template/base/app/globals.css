@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+
+@theme inline {
+	/* Css variables automatically generated in layout.tsx */
+	--font-dm-sans: var(--font-dm-sans);
+	--font-barrio: var(--font-barrio);
+}

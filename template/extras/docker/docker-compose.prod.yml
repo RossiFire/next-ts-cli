@@ -1,0 +1,34 @@
+# ============================================
+# Next.js SEO Starter - Docker Compose (Production)
+# ============================================
+#
+# Usage:
+#   Build & Start: docker compose -f docker-compose.prod.yml up --build -d
+#   Stop:          docker compose -f docker-compose.prod.yml down
+#
+# ============================================
+
+services:
+  app:
+    build:
+      context: .
+      target: runner
+      args:
+        NEXT_PUBLIC_BASE_URL: ${NEXT_PUBLIC_BASE_URL}
+    container_name: nextjs-seo-web
+    volumes: [] # No volume mounts in production
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    env_file:
+      - path: .env
+    restart: always
+    # Resource limits (adjust based on your needs)
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+        reservations:
+          cpus: "0.25"
+          memory: 256M

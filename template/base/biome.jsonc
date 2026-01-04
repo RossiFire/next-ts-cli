@@ -1,0 +1,272 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	},
+	"files": {
+		"ignoreUnknown": false
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 100
+	},
+	"linter": {
+		"enabled": true,
+		"domains": {
+			"next": "recommended"
+		},
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"recommended": true,
+				"noAccessKey": "error",
+				"noAriaUnsupportedElements": "error",
+				"noAutofocus": "warn",
+				"noDistractingElements": "error",
+				"noHeaderScope": "error",
+				"noInteractiveElementToNoninteractiveRole": "error",
+				"noNoninteractiveElementToInteractiveRole": "error",
+				"noNoninteractiveTabindex": "error",
+				"noPositiveTabindex": "error",
+				"noRedundantAlt": "error",
+				"noRedundantRoles": "error",
+				"useFocusableInteractive": "error",
+				"useKeyWithClickEvents": "error",
+				"useKeyWithMouseEvents": "error",
+				"useValidAnchor": "error",
+				"useValidAriaProps": "error",
+				"useValidAriaValues": "error",
+				"useValidLang": "warn"
+			},
+			"complexity": {
+				"recommended": true,
+				"noBannedTypes": "error",
+				"noExtraBooleanCast": "error",
+				"noAdjacentSpacesInRegex": "error",
+				"noStaticOnlyClass": "error",
+				"noUselessCatch": "error",
+				"noUselessConstructor": "error",
+				"noUselessEmptyExport": "error",
+				"noUselessFragments": "error",
+				"noUselessLabel": "error",
+				"noUselessLoneBlockStatements": "error",
+				"noUselessRename": "error",
+				"noUselessSwitchCase": "error",
+				"noUselessTypeConstraint": "error",
+				"noExcessiveCognitiveComplexity": "warn",
+				"noExcessiveNestedTestSuites": "warn"
+			},
+			"correctness": {
+				"recommended": true,
+				"noConstAssign": "error",
+				"noConstantCondition": "error",
+				"noConstructorReturn": "error",
+				"noEmptyCharacterClassInRegex": "error",
+				"noEmptyPattern": "error",
+				"noGlobalObjectCalls": "error",
+				"noInnerDeclarations": "error",
+				"noInvalidConstructorSuper": "error",
+				"noInvalidBuiltinInstantiation": "error",
+				"noNonoctalDecimalEscape": "error",
+				"noPrecisionLoss": "error",
+				"noSelfAssign": "error",
+				"noSetterReturn": "error",
+				"noSwitchDeclarations": "error",
+				"noUndeclaredVariables": "error",
+				"noUnreachable": "error",
+				"noUnreachableSuper": "error",
+				"noUnsafeFinally": "error",
+				"noUnsafeOptionalChaining": "error",
+				"noUnusedLabels": "error",
+				"noUnusedPrivateClassMembers": "error",
+				"noUnusedVariables": "error",
+				"noUnusedImports": "error",
+				"noUnusedFunctionParameters": "warn",
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error",
+				"useIsNan": "error",
+				"useJsxKeyInIterable": "error",
+				"useValidForDirection": "error",
+				"useYield": "error",
+				"noNestedComponentDefinitions": "off"
+			},
+			"performance": {
+				"recommended": true,
+				"noAccumulatingSpread": "warn",
+				"noDelete": "error"
+			},
+			"security": {
+				"recommended": true,
+				"noDangerouslySetInnerHtmlWithChildren": "error",
+				"noBlankTarget": "error",
+				"noGlobalEval": "error"
+			},
+			"style": {
+				"noImplicitBoolean": "off",
+				"noInferrableTypes": "error",
+				"noNamespace": "error",
+				"noNegationElse": "off",
+				"noParameterAssign": "error",
+				"noRestrictedGlobals": "error",
+				"noShoutyConstants": "warn",
+				"noUnusedTemplateLiteral": "error",
+				"useAsConstAssertion": "error",
+				"useBlockStatements": "error",
+				"useCollapsedElseIf": "warn",
+				"useConst": "error",
+				"useDefaultParameterLast": "error",
+				"useExponentiationOperator": "error",
+				"useFragmentSyntax": "error",
+				"useImportType": "warn",
+				"useNamingConvention": {
+					"level": "warn",
+					"options": {
+						"strictCase": false,
+						"conventions": [
+							{
+								"selector": {
+									"kind": "variable"
+								},
+								"formats": ["camelCase"]
+							},
+							{
+								"selector": {
+									"kind": "typeLike"
+								},
+								"formats": ["PascalCase"]
+							},
+							{
+								"selector": {
+									"kind": "function"
+								},
+								"formats": ["camelCase", "PascalCase", "CONSTANT_CASE"]
+							},
+							{
+								"selector": {
+									"kind": "objectLiteralMember"
+								},
+								"formats": ["camelCase", "snake_case", "PascalCase"]
+							},
+							{
+								"selector": {
+									"kind": "typeMember"
+								},
+								"formats": ["camelCase", "snake_case", "PascalCase"]
+							}
+						]
+					}
+				},
+				"useConsistentArrayType": {
+					"level": "warn",
+					"options": {
+						"syntax": "shorthand"
+					}
+				}
+			},
+			"suspicious": {
+				"noConsole": "warn"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "asNeeded",
+			"trailingCommas": "es5",
+			"semicolons": "always",
+			"arrowParentheses": "always",
+			"bracketSpacing": true
+		},
+		"globals": ["React", "JSX"]
+	},
+	"json": {
+		"formatter": {
+			"enabled": true,
+			"indentStyle": "tab",
+			"indentWidth": 2,
+			"lineWidth": 100,
+			"trailingCommas": "none"
+		}
+	},
+	"css": {
+		"formatter": {
+			"enabled": true,
+			"indentStyle": "tab",
+			"indentWidth": 2,
+			"lineWidth": 100,
+			"quoteStyle": "double"
+		},
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"overrides": [
+		{
+			"includes": [
+				"**/*.config.{js,ts,mjs,cjs}",
+				"**/next.config.{js,ts}",
+				"**/middleware.{ts,tsx,js}",
+				"**/route.{ts,tsx,js}",
+				"**/layout.{ts,tsx,js}",
+				"**/page.{ts,tsx,js}",
+				"**/loading.{ts,tsx,js}",
+				"**/error.{ts,tsx,js}",
+				"**/not-found.{ts,tsx,js}",
+				"**/template.{ts,tsx,js}",
+				"**/default.{ts,tsx,js}"
+			],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["**/app/**/*.{ts,tsx,js}"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"useExhaustiveDependencies": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": [
+				"**/*.test.{ts,tsx,js}",
+				"**/*.spec.{ts,tsx,js}",
+				"**/__tests__/**",
+				"**/__mocks__/**"
+			],
+			"javascript": {
+				"globals": [
+					"describe",
+					"it",
+					"test",
+					"expect",
+					"beforeEach",
+					"afterEach",
+					"beforeAll",
+					"afterAll",
+					"jest"
+				]
+			},
+			"linter": {
+				"rules": {
+					"suspicious": {
+						"noConsole": "off"
+					}
+				}
+			}
+		}
+	]
+}
