@@ -31,6 +31,17 @@ export const stripeInstaller: Installer = ({ projectDir }) => {
 	);
 	fs.copySync(webhookRouteSrc, webhookRouteDest);
 
+
+	const stripeSrc = path.join(stripeFilesDir, "stripe.ts");
+	const stripeDest = path.join(projectDir, "lib/stripe.ts");
+	fs.copySync(stripeSrc, stripeDest);
+
+
+	const pricesActionsSrc = path.join(stripeFilesDir, "prices.ts");
+	const pricesActionsDest = path.join(projectDir, "actions/prices.ts");
+	fs.copySync(pricesActionsSrc, pricesActionsDest);
+
+
 	addPackageScript({
 		projectDir,
 		scripts: {
