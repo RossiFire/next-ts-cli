@@ -2,8 +2,6 @@ import "dotenv/config";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { nextCookies } from "better-auth/next-js";
-
-/* Here imports have errors because they are related to the final directory structure */
 import { db } from "@/lib/db";
 
 if (!process.env.BETTER_AUTH_GITHUB_CLIENT_ID || !process.env.BETTER_AUTH_GITHUB_CLIENT_SECRET) {

@@ -27,6 +27,11 @@ export const betterAuthInstaller: Installer = ({ projectDir, packages }) => {
 	const apiHandlerDest = path.join(projectDir, "app", apiHandlerRelPath);
 	fs.copySync(apiHandlerSrc, apiHandlerDest);
 
+	/* Copy Auth Client */
+	const authClientSrc = path.join(betterAuthDir, "auth-client.ts");
+	const authClientDest = path.join(projectDir, "lib/auth-client.ts");
+	fs.copySync(authClientSrc, authClientDest);
+
 	/* Copy Auth Config */
 	const authConfigSrc = path.join(
 		betterAuthDir,
