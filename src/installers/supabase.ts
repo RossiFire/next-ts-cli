@@ -14,10 +14,19 @@ export const supabaseInstaller: Installer = ({ projectDir }) => {
 	});
 
 	const extrasDir = path.join(PKG_ROOT, "template/extras");
-	const supabaseDir = path.join(extrasDir, "supabase");
 
-	const supabaseDest = path.join(projectDir, "lib", "supabase");
-	fs.copySync(supabaseDir, supabaseDest);
+
+	const supabaseDir = path.join(extrasDir, "supabase");
+	
+	
+	const libContentSrc = path.join(supabaseDir, "supabase");
+	const libContentDest = path.join(projectDir, "lib/supabase");
+
+	const proxySrc = path.join(supabaseDir, "proxy.ts");
+	const proxyDest = path.join(projectDir, "proxy.ts");
+	fs.copySync(proxySrc, proxyDest);
+
+	fs.copySync(libContentSrc, libContentDest);
 
 	addMcpServer({
 		serverName: "supabase",
