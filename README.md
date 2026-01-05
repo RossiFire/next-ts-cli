@@ -37,7 +37,7 @@ pnpm create next-ts-cli
 yarn create next-ts-cli
 
 # bun
-bunx next-ts-cli
+bun next-ts-cli
 ```
 The CLI will guide you through the setup process:
 
