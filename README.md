@@ -10,7 +10,7 @@
 **Minimal CLI to scaffold a production-ready Next.js applications**
 
 [![npm version](https://img.shields.io/npm/v/next-ts-cli.svg)](https://www.npmjs.com/package/next-ts-cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/next-ts-cli?style=flat&color=%231dd1a1)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen.svg)](https://nodejs.org/)
 
 [Getting Started](#getting-started) •
@@ -127,35 +127,17 @@ The core project structure contains the following features:
 
 ```bash
 # Create with defaults
-npx next-ts-cli my-app -d
+npx next-ts-cli my-app --cli -d
 
 # Create with specific packages (CLI mode)
 npx next-ts-cli my-app --cli --drizzle --betterauth --stripe
 
 # Custom import alias
-npx next-ts-cli my-app -a "~/"
+npx next-ts-cli my-app --cli -a "~/"
 
 # Full stack example
 npx next-ts-cli my-app --cli --drizzle --betterauth --stripe --docker --shadcnui
 ```
-
----
-
-## Core tech stack
-
-### Base Template Includes
-
-| Technology | Version | Description |
-|------------|---------|-------------|
-| [Next.js](https://nextjs.org/) | 16.x | React framework with App Router |
-| [React](https://react.dev/) | 19.x | UI library |
-| [TypeScript](https://www.typescriptlang.org/) | 5.x | Type safety |
-| [Tailwind CSS](https://tailwindcss.com/) | 4.x | Utility-first CSS |
-| [Biome](https://biomejs.dev/) | 2.x | Linter and formatter |
-| [Jest](https://jestjs.io/) | 30.x | Testing framework |
-| [Framer Motion](https://www.framer.com/motion/) | 12.x | Animation library |
-| [Husky](https://typicode.github.io/husky/) | 9.x | Git hooks |
-| [Commitlint](https://commitlint.js.org/) | 20.x | Commit message linting |
 
 ## Contributing
 

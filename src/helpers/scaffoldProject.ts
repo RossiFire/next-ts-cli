@@ -15,6 +15,7 @@ export const scaffoldProject = async ({
 	pkgManager,
 }: InstallerOptions) => {
 	const srcDir = path.join(PKG_ROOT, "template/base");
+	const templateDir = path.join(PKG_ROOT, "template");
 
 	logger.info(`\nUsing: ${chalk.cyan.bold(pkgManager)}\n`);
 
@@ -80,7 +81,10 @@ export const scaffoldProject = async ({
 	spinner.start();
 
 	fs.copySync(srcDir, projectDir);
-	
+	fs.copySync(
+		path.join(templateDir, "_gitignore"),
+		path.join(projectDir, ".gitignore")
+	);
 
 	const scaffoldedName =
 		projectName === "." ? "App" : chalk.cyan.bold(projectName);

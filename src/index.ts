@@ -81,11 +81,7 @@ const main = async () => {
 
 	await initializeGit(projectDir);
 
-	await logNextSteps({
-		projectName: appDir,
-		packages: usePackages,
-		projectDir,
-	});
+	await logNextSteps({ projectName: appDir });
 
 	process.exit(0);
 };

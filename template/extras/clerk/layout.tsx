@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 							<SignedOut>
 								<SignInButton />
 								<SignUpButton>
-									<button className="bg-[#6c47ff] text-white rounded-full font-medium text-sm px-4 py-2 cursor-pointer">
+									<button className="bg-[#6c47ff] text-white rounded-full font-medium text-sm px-4 py-2 cursor-pointer" type="button" >
 										Sign Up
 									</button>
 								</SignUpButton>
