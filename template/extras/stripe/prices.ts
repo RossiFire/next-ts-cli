@@ -1,7 +1,7 @@
 "use server";
 
 import type { Stripe } from "stripe";
-import { stripe } from "./stripe";
+import { stripe } from "@/lib/stripe";
 
 /* List all prices */
 async function getPrices(
