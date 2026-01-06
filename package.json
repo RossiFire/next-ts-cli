@@ -1,6 +1,6 @@
 {
   "name": "next-ts-cli",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Create production-ready web application with the Next.js",
   "author": "Daniele Rossino <daniele.rossino10@gmail.com>",
   "maintainers": [],
